@@ -1,7 +1,8 @@
 #HOMEWORK 2
-#Display Chiang mai's temperature
+#Display Chiang Mai's temperature
 
 pip install schedule
+pip install beautifulsoup4
 
 from bs4 import BeautifulSoup as bs
 import requests as req
