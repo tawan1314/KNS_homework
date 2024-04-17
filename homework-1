@@ -1,0 +1,18 @@
+#HOMEWORK 1
+#Input the numbers and aggregate the numbers
+
+input_number = int(input("Please input the number : "))
+counter = 1
+i = 1
+list_number = []
+while counter <= input_number:
+  print("Number {} : ".format(i), end = '')
+  n = int(input())
+  list_number.append(n)
+  counter += 1
+  i += 1
+
+print("\nMax :", max(list_number))
+print("Min :", min(list_number))
+print("Total : ", sum(list_number))
+print("Average : ", sum(list_number)/len(list_number))
