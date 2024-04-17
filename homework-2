@@ -1,0 +1,30 @@
+#HOMEWORK 2
+#Display Chiang mai's temperature
+
+pip install schedule
+
+from bs4 import BeautifulSoup as bs
+import requests as req
+import time
+import schedule
+
+def temperature_warning():
+    
+    url = "https://weather.tomorrow.io/th/TH/50/Chiang_Mai/106474/"
+
+    data = req.get(url)
+
+    soup = bs(data.text, 'html.parser')
+
+    values = soup.find("span",{"class":"_3fQrr5"})
+    
+    current_time = time.ctime()
+
+    for i in values:
+        print(current_time, "temperature : ", i)
+
+temperature_warning()
+schedule.every(5).minutes.do(temperature_warning)
+
+while True:
+    schedule.run_pending()
