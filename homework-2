@@ -22,7 +22,7 @@ def temperature_warning():
     current_time = time.ctime()
 
     for i in values:
-        print(current_time, "temperature : ", i)
+        print(current_time, "Chiang Mai's temperature : ", i)
 
 temperature_warning()
 schedule.every(5).minutes.do(temperature_warning)
