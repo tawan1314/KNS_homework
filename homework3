@@ -1,0 +1,16 @@
+first_input = input("Add Text : ")
+print(first_input)
+
+only_number = ""
+for i in first_input:
+    if i.isdigit():
+        only_number += i
+int_number = int(only_number)
+print(int_number)
+
+reverse_number = 0
+while int_number != 0:
+    last_number = int_number % 10
+    reverse_number = reverse_number * 10 + last_number
+    int_number //= 10
+print(reverse_number)
